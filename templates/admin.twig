@@ -1,0 +1,73 @@
+{% extends 'admin.twig' %}
+
+{% set title %}{{ 'ArchiveSite_ArchiveSite'|translate }}{% endset %}
+
+{% block content %}
+
+<div class="ui-confirm" id="confirmArchiving">
+    <h2>{{ 'ArchiveSite_ConfirmArchiving'|translate('<span class="website"></span>', '<span class="segment"></span>')|raw }}</h2>
+    <input role="yes" type="button" value="{{ 'General_Yes'|translate }}"/>
+    <input role="no" type="button" value="{{ 'General_No'|translate }}"/>
+</div>
+
+<div piwik-content-block content-title="{{ title|e('html_attr') }}" class="archive-site-page">
+
+    <p>{{ 'ArchiveSite_PageDescription'|translate }}</p>    
+
+    <div ng-controller="ArchiveSiteController">
+
+        <div class="form-group row">
+            <div class="col s12 ng-scope input-field m6">
+                <div class="ng-scope">
+                    <div piwik-siteselector
+                         title=""
+                         show-selected-site="true"
+                         siteid="all"
+                         sitename="{{ 'ArchiveSite_AllWebsites'|translate|e('html_attr') }}"
+                         class="site-selection select-wrapper"
+                         ng-model="site"
+                         id="archiveSite"
+                         ng-change="fetchSegments()"
+                         all-sites-text="{{ 'ArchiveSite_AllWebsites'|translate|e('html_attr') }}"
+                         all-sites-location="top"
+                         switch-site-on-select="false"></div>
+                    <label for="archiveSite" class="ng-binding">{{ 'ArchiveSite_ChooseWebsite'|translate }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div piwik-field uicontrol="select" name="segment"
+             ng-model="segment"
+             title="{{ 'ArchiveSite_ChooseSegment'|translate|e('html_attr') }}"
+             value=""			 
+             options="availableSegments">
+        </div>
+
+        <div piwik-field uicontrol="text" name="dateRange"
+             ng-model="dateRange"
+             title="{{ 'ArchiveSite_CustomRange'|translate|e('html_attr') }}"
+             value="">
+        </div>		
+		
+        <div piwik-field uicontrol="checkbox" name="disableScheduledTasks"
+             ng-model="disableScheduledTasks"
+             title="{{ 'ArchiveSite_DisableScheduledTasks'|translate|e('html_attr') }}"
+             value="1">
+        </div>
+		
+        <div piwik-field uicontrol="checkbox" name="disableSegmentsArchiving"
+             ng-model="disableSegmentsArchiving"
+             title="{{ 'ArchiveSite_DisableSegmentsArchiving'|translate|e('html_attr') }}"
+             value="0">
+        </div>
+
+        <div piwik-save-button
+             onconfirm="archive()"
+             saving="loading"
+             value="{{ 'ArchiveSite_ArchiveSite'|translate|e('html_attr') }}">
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

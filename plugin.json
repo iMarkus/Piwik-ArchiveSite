@@ -1,0 +1,29 @@
+{
+	"name": "ArchiveSite",
+	"description": "Start archiving process via web.",
+	"version": "0.1.0",
+	"license": "GPL v3+",
+	"theme": false,
+	"homepage": "https://github.com/iMarkus/Piwik-ArchiveSite",
+	"require": {
+        "piwik": ">=3.0.0,<4.0.0",
+        "php": ">=5.6.0"
+    },
+    "authors": [
+        {
+            "name": "iMarkus",
+            "email": "iMarkus@users.noreply.github.com",
+            "homepage": "https://github.com/iMarkus"
+        },
+        {
+            "name": "hagor",
+            "email": "hagor@users.noreply.github.com",
+            "homepage": "https://github.com/hagor"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/iMarkus/Piwik-ArchiveSite/issues"
+    },
+    "license": "GPL v3+",
+    "keywords": ["Archive", "Site"]
+}

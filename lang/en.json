@@ -1,0 +1,16 @@
+{
+    "ArchiveSite": {
+		"ArchiveSite": "Archive Site",
+		"PageDescription": "Description",
+		"AllWebsites": "all websites",
+		"AllSegments": "all segments",
+		"ChooseSegment": "Choose segment",
+		"ChooseWebsite": "Choose website",
+		"CustomRange": "Leave empty or insert date range to archive (Format: YYYY-MM-DD,YYYY-MM-DD)",		
+		"DisableScheduledTasks": "disable scheduled tasks",
+		"DisableSegmentsArchiving": "disable segments archiving",
+		"ArchiveSuccess": "Archiving finished.",
+		"ArchiveReturn": "The Archiver returned:",
+		"ConfirmArchiving": "Are you sure you want to start archiving for %1$s and %2$s?"
+    }
+}
