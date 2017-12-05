@@ -6,7 +6,7 @@
 		"AllSegments": "all segments",
 		"ChooseSegment": "Choose segment",
 		"ChooseWebsite": "Choose website",
-		"CustomRange": "Leave empty or insert date range to archive (Format: YYYY-MM-DD,YYYY-MM-DD)",		
+		"CustomRange": "Empty or date range to archive (Format: YYYY-MM-DD,YYYY-MM-DD)",		
 		"DisableScheduledTasks": "disable scheduled tasks",
 		"DisableSegmentsArchiving": "disable segments archiving",
 		"ArchiveSuccess": "Archiving finished.",
