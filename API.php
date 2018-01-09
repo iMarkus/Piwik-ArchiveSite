@@ -79,11 +79,11 @@ class API extends \Piwik\Plugin\API
           $archiver->disableSegmentsArchiving = $disableSegmentsArchiving;
         }      
 		
-		ob_start();		
-		$archiver->main();	
-		$consoleOutput = ob_get_contents();
-		ob_end_clean();		
+        ob_start();		
+        $archiver->main();	
+        $consoleOutput = ob_get_contents();
+        ob_end_clean();		
 		
-		return $consoleOutput;        
+        return "<pre>$consoleOutput</pre>";
     }    
 }
