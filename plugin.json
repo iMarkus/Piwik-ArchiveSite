@@ -1,7 +1,7 @@
 {
 	"name": "ArchiveSite",
 	"description": "Start archiving process via web.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "GPL v3+",
 	"theme": false,
 	"homepage": "https://github.com/iMarkus/Piwik-ArchiveSite",
